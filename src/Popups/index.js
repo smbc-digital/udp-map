@@ -157,7 +157,7 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const landscapecharacterareaPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Landscape Character Area</p>
+  const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">Landscape Character Area</p>
   <p></p>
   <p class="info">Name: ${feature.properties.name}</p>
   <p class="info">Policy: ${feature.properties.policy}</p>
@@ -166,6 +166,67 @@ const airport_public_safety_zonePopup = (feature, layer) => {
  
   layer.bindPopup(content)
  }
+
+ const localnaturereservePopup = (feature, layer) => {
+  
+  const content = `<div class="item"><i class="fa fa-tree" aria-hidden="true"></i><p class="title">Local Nature Reserve</p>
+  <p></p>
+  <p class="info">Name: ${feature.properties.reserve_na}</p>
+  
+  </div>`
+ 
+  layer.bindPopup(content)
+ }
+
+const localopenspacePopup = (feature, layer) => {
+  
+const content = `<div class="item"><i class="fa fa-leaf" aria-hidden="true"></i><p class="title">Local Open Space</p>
+<p></p>
+<p class="info">ID: ${feature.properties.id}</p>
+<p class="info">Name: ${feature.properties.name}</p>
+<p class="info">Policy: ${feature.properties.policy}</p>
+  
+</div>`
+ 
+layer.bindPopup(content)
+}
+
+const localwildlifesitesPopup = (feature, layer) => {
+  
+  const content = `<div class="item"><i class="fa fa-pagelines" aria-hidden="true"></i><p class="title">Local Wildlife Sites</p>
+  <p></p>
+  <p class="info">ID: ${feature.properties.id}</p>
+  <p class="info">Policy: ${feature.properties.policy}</p>
+    
+  </div>`
+   
+  layer.bindPopup(content)
+  }
+
+const metrolinkcorridorPopup = (feature, layer) => {
+  
+  const content = `<div class="item"><i class="fa fa-subway" aria-hidden="true"></i><p class="title">Metrolink Corridor</p>
+  <p></p>
+  <p class="info">Chapter: ${feature.properties.chapter}</p>
+  <p class="info">Policy: ${feature.properties.policy}</p>
+      
+  </div>`
+     
+  layer.bindPopup(content)
+  }
+
+const m60gatewaysitesPopup = (feature, layer) => {
+  
+  const content = `<div class="item"><i class="fa fa-road" aria-hidden="true"></i><p class="title">M60 Gateway Sites</p>
+  <p></p>
+  <p class="info">Chapter: ${feature.properties.chapter}</p>
+  <p class="info">Name: ${feature.properties.name}</p>
+  <p class="info">Policy: ${feature.properties.policy}</p>
+     
+  </div>`
+     
+  layer.bindPopup(content)
+  }
 
 export {
   airport_public_safety_zonePopup,
@@ -181,5 +242,10 @@ export {
   greenchainPopup,
   gravel_aosPopup,
   housingsitesPopup,
-  landscapecharacterareaPopup
+  landscapecharacterareaPopup,
+  localnaturereservePopup,
+  localopenspacePopup,
+  localwildlifesitesPopup,
+  metrolinkcorridorPopup,
+  m60gatewaysitesPopup
 }

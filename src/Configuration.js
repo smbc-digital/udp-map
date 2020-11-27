@@ -1,6 +1,6 @@
 //import Leaflet from 'leaflet'
-import { airport_public_safety_zoneStyle, ancientmonumentStyle, conservationareaStyle, employmentareasStyle, employmentproposedStyle, prowStyle, floodzonesStyle, greenbeltStyle, greenbeltmedsStyle, generalStyle, greenchainStyle, gravel_aosStyle, housingsitesStyle, landscapecharacterareaStyle } from './Style'
-import { airport_public_safety_zonePopup, ancientmonumentPopup, conservationareaPopup, employmentareasPopup, employmentproposedPopup, prowPopup, floodzonesPopup, greenbeltPopup, greenbeltmedsPopup, generalPopup, greenchainPopup, gravel_aosPopup, housingsitesPopup, landscapecharacterareaPopup } from './Popups'
+import { airport_public_safety_zoneStyle, ancientmonumentStyle, conservationareaStyle, employmentareasStyle, employmentproposedStyle, prowStyle, floodzonesStyle, greenbeltStyle, greenbeltmedsStyle, generalStyle, greenchainStyle, gravel_aosStyle, housingsitesStyle, landscapecharacterareaStyle, localnaturereserveStyle, localopenspaceStyle, localwildlifesitesStyle, metrolinkcorridorStyle, m60gatewaysitesStyle } from './Style'
+import { airport_public_safety_zonePopup, ancientmonumentPopup, conservationareaPopup, employmentareasPopup, employmentproposedPopup, prowPopup, floodzonesPopup, greenbeltPopup, greenbeltmedsPopup, generalPopup, greenchainPopup, gravel_aosPopup, housingsitesPopup, landscapecharacterareaPopup, localnaturereservePopup, localopenspacePopup, localwildlifesitesPopup, metrolinkcorridorPopup, m60gatewaysitesPopup } from './Popups'
 
 const Configuration = {
     Map: {
@@ -177,6 +177,66 @@ const Configuration = {
                 maxZoom: 2,
                 style: landscapecharacterareaStyle,
                 onEachFeature: landscapecharacterareaPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Local Nature Reserves',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=biota:local_nature_reserves&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: localnaturereserveStyle,
+                onEachFeature: localnaturereservePopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Local Open Space',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:local_open_space&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: localopenspaceStyle,
+                onEachFeature: localopenspacePopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Local Wildlife Sites',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:local_wildlife_sites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: localwildlifesitesStyle,
+                onEachFeature: localwildlifesitesPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Metrolink Corridor',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:metrolink_corridor&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: metrolinkcorridorStyle,
+                onEachFeature: metrolinkcorridorPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'M60 Gateway Sites',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:m60_gateway_sites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: m60gatewaysitesStyle,
+                onEachFeature: m60gatewaysitesPopup
             },
             displayOverlay: true,
             visibleByDefault: false

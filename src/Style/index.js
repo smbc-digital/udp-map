@@ -122,6 +122,46 @@ const landscapecharacterareaStyle = {
     fillOpacity: 0
 }
 
+const localnaturereserveStyle = {
+    color: '#41ab5d',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#74c476',
+    fillOpacity: 0.25
+}
+
+const localopenspaceStyle = {
+    color: '#000000',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#41ab5d',
+    fillOpacity: 0.25
+}
+
+const localwildlifesitesStyle = {
+    color: '#006d2c',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#a1d99b',
+    fillOpacity: 0.25
+}
+
+const metrolinkcorridorStyle = {
+    color: '#d94801',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#f16913',
+    fillOpacity: 0.25
+}
+
+const m60gatewaysitesStyle = {
+    color: '#3f007d',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#fb6a4a',
+    fillOpacity: 0.25
+}
+
 export {
         airport_public_safety_zoneStyle,
         ancientmonumentStyle,
@@ -136,5 +176,10 @@ export {
         greenchainStyle,
         gravel_aosStyle,
         housingsitesStyle,
-        landscapecharacterareaStyle
+        landscapecharacterareaStyle,
+        localnaturereserveStyle,
+        localopenspaceStyle,
+        localwildlifesitesStyle,
+        metrolinkcorridorStyle,
+        m60gatewaysitesStyle
     }
