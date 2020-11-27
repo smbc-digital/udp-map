@@ -1,6 +1,6 @@
 //import Leaflet from 'leaflet'
-import { airport_public_safety_zoneStyle, ancientmonumentStyle, conservationareaStyle, employmentareasStyle, employmentproposedStyle, prowStyle, floodzonesStyle, greenbeltStyle, greenbeltmedsStyle, generalStyle, greenchainStyle, gravel_aosStyle, housingsitesStyle, landscapecharacterareaStyle, localnaturereserveStyle, localopenspaceStyle, localwildlifesitesStyle, metrolinkcorridorStyle, m60gatewaysitesStyle } from './Style'
-import { airport_public_safety_zonePopup, ancientmonumentPopup, conservationareaPopup, employmentareasPopup, employmentproposedPopup, prowPopup, floodzonesPopup, greenbeltPopup, greenbeltmedsPopup, generalPopup, greenchainPopup, gravel_aosPopup, housingsitesPopup, landscapecharacterareaPopup, localnaturereservePopup, localopenspacePopup, localwildlifesitesPopup, metrolinkcorridorPopup, m60gatewaysitesPopup } from './Popups'
+import { airport_public_safety_zoneStyle, ancientmonumentStyle, conservationareaStyle, employmentareasStyle, employmentproposedStyle, prowStyle, floodzonesStyle, greenbeltStyle, greenbeltmedsStyle, generalStyle, greenchainStyle, gravel_aosStyle, housingsitesStyle, landscapecharacterareaStyle, localnaturereserveStyle, localopenspaceStyle, localwildlifesitesStyle, metrolinkcorridorStyle, m60gatewaysitesStyle, parkgardenofhistoricinterestStyle, pgasStyle, predominantlyresidentialStyle, reliefroadcorridorStyle, sandaosStyle, sandgritaosStyle, shopfrontagesStyle, shoppingtcStyle, shoppingareasStyle, sbiStyle, sssiStyle, strategicopenspaceStyle, strategicrecreationroutesStyle, towncentreareasStyle } from './Style'
+import { airport_public_safety_zonePopup, ancientmonumentPopup, conservationareaPopup, employmentareasPopup, employmentproposedPopup, prowPopup, floodzonesPopup, greenbeltPopup, greenbeltmedsPopup, generalPopup, greenchainPopup, gravel_aosPopup, housingsitesPopup, landscapecharacterareaPopup, localnaturereservePopup, localopenspacePopup, localwildlifesitesPopup, metrolinkcorridorPopup, m60gatewaysitesPopup, parkgardenofhistoricinterestPopup, pgasPopup, predominantlyresidentialPopup, reliefroadcorridorPopup, sandaosPopup, sandgritaosPopup, shopfrontagesPopup, shoppingtcPopup, shoppingareasPopup, sbiPopup, sssiPopup, strategicopenspacePopup, strategicrecreationroutesPopup, towncentreareasPopup } from './Popups'
 
 const Configuration = {
     Map: {
@@ -241,7 +241,175 @@ const Configuration = {
             displayOverlay: true,
             visibleByDefault: false
         },
+
+        {
+            key: 'Parks and Gardens of Historic Interest',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=heritage:parkgarden_of_historic_interest&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: parkgardenofhistoricinterestStyle,
+                onEachFeature: parkgardenofhistoricinterestPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'PGAs',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:pgas&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: pgasStyle,
+                onEachFeature: pgasPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Predominantly Residential Area',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:predominantly_residential&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: predominantlyresidentialStyle,
+                onEachFeature: predominantlyresidentialPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Relief Road Corridor',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:relief_road_corridor&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: reliefroadcorridorStyle,
+                onEachFeature: reliefroadcorridorPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Sand Area of Search',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:sand_aos&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: sandaosStyle,
+                onEachFeature: sandaosPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Sandstone/Gritstone Area of Search',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:sandstone_gritstone&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: sandgritaosStyle,
+                onEachFeature: sandgritaosPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Shop Frontages',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:shop_frontages&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: shopfrontagesStyle,
+                onEachFeature: shopfrontagesPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Shopping Areas - Town Centre',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:shopping_tc&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: shoppingtcStyle,
+                onEachFeature: shoppingtcPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Shopping Areas',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:shopping_areas&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: shoppingareasStyle,
+                onEachFeature: shoppingareasPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'SBIs',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=biota:sbi&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: sbiStyle,
+                onEachFeature: sbiPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'SSSIs',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=biota:sssi&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: sssiStyle,
+                onEachFeature: sssiPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Strategic Open Space',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:strategic_open_space&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: strategicopenspaceStyle,
+                onEachFeature: strategicopenspacePopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
         
+        {
+            key: 'Strategic Recreation Routes',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:strategic_recreation_routes&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: strategicrecreationroutesStyle,
+                onEachFeature: strategicrecreationroutesPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Town Centre Areas',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:town_centre_areas&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: towncentreareasStyle,
+                onEachFeature: towncentreareasPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
         {
             key: 'os1250_line',
             url: 'http://spatial.stockport.gov.uk/geoserver/wms?',

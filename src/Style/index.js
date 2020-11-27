@@ -162,6 +162,120 @@ const m60gatewaysitesStyle = {
     fillOpacity: 0.25
 }
 
+const parkgardenofhistoricinterestStyle = {
+    color: '#d94801',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#fb6a4a',
+    fillOpacity: 0
+}
+
+const pgasStyle = {
+    color: '#fed976',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#fed976',
+    fillOpacity: 0.25
+}
+
+const predominantlyresidentialStyle = {
+    color: '#252525',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#737373',
+    fillOpacity: 0.25
+}
+
+const reliefroadcorridorStyle = {
+    color: '#000000',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#737373',
+    fillOpacity: 0
+}
+
+const sandaosStyle = {
+    color: '#969696',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#969696',
+    fillOpacity: 0.25
+}
+
+const sandgritaosStyle = {
+    color: '#252525',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#969696',
+    fillOpacity: 0.25
+}
+
+const shopfrontagesStyle = {
+    color: '#08306b',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#969696',
+    fillOpacity: 0.25
+}
+
+const shoppingtcStyle = {
+    color: '#000000',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#08519c',
+    fillOpacity: 0.25
+}
+
+const shoppingareasStyle = {
+    color: '#000000',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#08519c',
+    fillOpacity: 0.25
+}
+
+const sbiStyle = {
+    color: '#00441b',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#74c476',
+    fillOpacity: 0.25
+}
+
+const sssiStyle = {
+    color: '#41ab5d',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#c7e9c0',
+    fillOpacity: 0.25
+}
+
+const strategicopenspaceStyle = {
+    color: '#252525',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#7bccc4',
+    fillOpacity: 0.25
+}
+
+const strategicrecreationroutesStyle = {
+    color: '#cb181d',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#fec44f',
+    fillOpacity: 0,
+    dashArray: '7,7,7',
+    dashOffset: '0'
+}
+
+const towncentreareasStyle = {
+    color: '#000000',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#fe9929',
+    fillOpacity: 0.25,
+}
+
 export {
         airport_public_safety_zoneStyle,
         ancientmonumentStyle,
@@ -181,5 +295,19 @@ export {
         localopenspaceStyle,
         localwildlifesitesStyle,
         metrolinkcorridorStyle,
-        m60gatewaysitesStyle
+        m60gatewaysitesStyle,
+        parkgardenofhistoricinterestStyle,
+        pgasStyle,
+        predominantlyresidentialStyle,
+        reliefroadcorridorStyle,
+        sandaosStyle,
+        sandgritaosStyle,
+        shopfrontagesStyle,
+        shoppingtcStyle,
+        shoppingareasStyle,
+        sbiStyle,
+        sssiStyle,
+        strategicopenspaceStyle,
+        strategicrecreationroutesStyle,
+        towncentreareasStyle
     }
