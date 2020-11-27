@@ -1,11 +1,11 @@
 //import Leaflet from 'leaflet'
-import { adopted_highwaysStyle, prowStyle } from './Style'
-import { prowPopup } from './Popups'
+import { airport_public_safety_zoneStyle, ancientmonumentStyle, conservationareaStyle, employmentareasStyle, employmentproposedStyle, prowStyle, floodzonesStyle, greenbeltStyle, greenbeltmedsStyle, generalStyle, greenchainStyle, gravel_aosStyle, housingsitesStyle, landscapecharacterareaStyle } from './Style'
+import { airport_public_safety_zonePopup, ancientmonumentPopup, conservationareaPopup, employmentareasPopup, employmentproposedPopup, prowPopup, floodzonesPopup, greenbeltPopup, greenbeltmedsPopup, generalPopup, greenchainPopup, gravel_aosPopup, housingsitesPopup, landscapecharacterareaPopup } from './Popups'
 
 const Configuration = {
     Map: {
         StartingLatLng: [53.3915, -2.125143],
-        StartingZoom: 16,
+        StartingZoom: 2,
         FullscreenControl: true,
         DisplayLayerControls: true,
         DisplayGrayScale: true,
@@ -15,23 +15,168 @@ const Configuration = {
     DynamicData: 
     [
         {
-            key: 'Adopted Highways',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=con29:2_1a&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            key: 'Airport Public Safety Zone',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:airport_public_safety_zone&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
-                style: adopted_highwaysStyle,
-                maxZoom: 14
+                style: airport_public_safety_zoneStyle,
+                onEachFeature: airport_public_safety_zonePopup,
+                maxZoom: 2
             },
             displayOverlay: true,
-            visibleByDefault: true
+            visibleByDefault: false
         },
 
         {
-            key: 'Public Rights of Way',
+            key: 'Ancient Monuments',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=heritage:ancient_monument&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: ancientmonumentStyle,
+                onEachFeature: ancientmonumentPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Conservation Areas',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=heritage:conservation_area&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: conservationareaStyle,
+                onEachFeature: conservationareaPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Employment Areas',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:employment_areas&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: employmentareasStyle,
+                onEachFeature: employmentareasPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Employment Proposed',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:employment_proposed&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: employmentproposedStyle,
+                onEachFeature: employmentproposedPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Definitive Rights of Way',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=highways:public_rights_of_way&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 maxZoom: 2,
                 style: prowStyle,
                 onEachFeature: prowPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Flood Zones',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=flooding:flood_zones&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: floodzonesStyle,
+                onEachFeature: floodzonesPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Green Belt',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:green_belt_os&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: greenbeltStyle,
+                onEachFeature: greenbeltPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Green Belt MEDS',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:greenbelt_meds&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: greenbeltmedsStyle,
+                onEachFeature: greenbeltmedsPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'General',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:general&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: generalStyle,
+                onEachFeature: generalPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Green Chain',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:green_chain&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: greenchainStyle,
+                onEachFeature: greenchainPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Gravel',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:gravel_aos&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: gravel_aosStyle,
+                onEachFeature: gravel_aosPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Housing Sites',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:housing_sites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: housingsitesStyle,
+                onEachFeature: housingsitesPopup
+            },
+            displayOverlay: true,
+            visibleByDefault: false
+        },
+
+        {
+            key: 'Landscape Character Areas',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:landscape_character_area&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                maxZoom: 2,
+                style: landscapecharacterareaStyle,
+                onEachFeature: landscapecharacterareaPopup
             },
             displayOverlay: true,
             visibleByDefault: false
