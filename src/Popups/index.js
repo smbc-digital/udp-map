@@ -2,7 +2,6 @@ const airport_public_safety_zonePopup = (feature, layer) => {
   
   const content = `<div class="item"><i class="fa fa-plane" aria-hidden="true"></i><p class="title">Airport Public Safety Zone</p>
   <p></p>
-  <p class="info">Name: ${feature.properties.name}</p>
   <p class="info">Policy: ${feature.properties.policy}</p>
   
   </div>`
@@ -51,7 +50,6 @@ const airport_public_safety_zonePopup = (feature, layer) => {
   const content = `<div class="item"><i class="fa fa-briefcase" aria-hidden="true"></i><p class="title">Employment Proposed</p>
   <p></p>
   <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
   <p class="info">Name: ${feature.properties.policy}</p>
   
   </div>`
