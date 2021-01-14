@@ -111,7 +111,7 @@ const Configuration = {
         },
 
         {
-            key: 'Green Belt MEDS',
+            key: 'Major Existing Development Sites in the Green Belt (MEDS)',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:greenbelt_meds&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 maxZoom: 2,
@@ -255,7 +255,7 @@ const Configuration = {
         },
 
         {
-            key: 'PGAs',
+            key: 'Policy Guidance Areas',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning_udp:pgas&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 maxZoom: 2,
@@ -351,7 +351,7 @@ const Configuration = {
         },
 
         {
-            key: 'SBIs',
+            key: 'Sites of Biological Importance',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=biota:sbi&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 maxZoom: 2,
@@ -363,7 +363,7 @@ const Configuration = {
         },
 
         {
-            key: 'SSSIs',
+            key: 'Sites of Special Scientific Importance',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=biota:sssi&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 maxZoom: 2,
