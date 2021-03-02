@@ -15,11 +15,15 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const ancientmonumentPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-flag" aria-hidden="true"></i><p class="title">Ancient Monuments</p>
-  <p></p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">National Monument No: ${feature.properties.national_monument_no}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-flag smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Ancient Monuments</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Name: ${feature.properties.name}</p>
+      <p>National Monument No: ${feature.properties.national_monument_no}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -27,10 +31,14 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const conservationareaPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-certificate" aria-hidden="true"></i><p class="title">Conservation Areas</p>
-  <p></p>
-  <p class="info">${feature.properties.cons_area}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-certificate smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Conservation Areas</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>${feature.properties.cons_area}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -38,12 +46,16 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const employmentareasPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-briefcase" aria-hidden="true"></i><p class="title">Employment Areas</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Name: ${feature.properties.policy}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-briefcase smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Employment Areas</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Name: ${feature.properties.policy}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -51,11 +63,15 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const employmentproposedPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-briefcase" aria-hidden="true"></i><p class="title">Employment Proposed</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.policy}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-briefcase smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Employment Proposed</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.policy}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -63,11 +79,15 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const prowPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-map-signs" aria-hidden="true"></i><p class="title">Definitive Rights of Way</p>
-  <p></p>
-  <p class="info">PROW Number: ${feature.properties.row}</p>
-  <p class="info">Type: ${feature.properties.type}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-map-signs smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Definitive Rights of Way</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>PROW Number: ${feature.properties.row}</p>
+      <p>Type: ${feature.properties.type}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -75,12 +95,16 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const floodzonesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-tint" aria-hidden="true"></i><p class="title">Flood Zones</p>
-  <p></p>
-  <p class="info">Risk Level: ${feature.properties.risk_level}</p>
-  <p class="info">Type: ${feature.properties.type}</p>
-  <p class="info">Source: ${feature.properties.source}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-tint smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Flood Zones</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Risk Level: ${feature.properties.risk_level}</p>
+      <p>Type: ${feature.properties.type}</p>
+      <p>Source: ${feature.properties.source}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -88,8 +112,11 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const greenbeltPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-pagelines" aria-hidden="true"></i><p class="title">Green Belt</p>
-
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fab fa-pagelines smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Green Belt</span>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -97,11 +124,15 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const greenbeltmedsPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-building-o" aria-hidden="true"></i><p class="title">Green Belt MEDS</p>
-  <p></p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="far fa-building smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Green Belt MEDS</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -109,11 +140,15 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const generalPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">General</p>
-  <p></p>
-  <p class="info">Name: ${feature.properties.tquniqueid}</p>
-  <p class="info">Policy: ${feature.properties.policy_1}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-list smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">General</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Name: ${feature.properties.tquniqueid}</p>
+      <p>Policy: ${feature.properties.policy_1}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -121,11 +156,15 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const greenchainPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-leaf" aria-hidden="true"></i><p class="title">Green Chain</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-leaf smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Green Chain</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -133,12 +172,16 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const gravel_aosPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-search" aria-hidden="true"></i><p class="title">Gravel</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-search smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Gravel</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -146,12 +189,16 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const housingsitesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Housing Sites</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-home smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Housing Sites</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -159,11 +206,15 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const landscapecharacterareaPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">Landscape Character Area</p>
-  <p></p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-list smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Landscape Character Area</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -171,10 +222,14 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
  const localnaturereservePopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-tree" aria-hidden="true"></i><p class="title">Local Nature Reserve</p>
-  <p></p>
-  <p class="info">Name: ${feature.properties.reserve_na}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-tree smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Local Nature Reserve</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Name: ${feature.properties.reserve_na}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -182,24 +237,32 @@ const airport_public_safety_zonePopup = (feature, layer) => {
 
 const localopenspacePopup = (feature, layer) => {
   
-const content = `<div class="item"><i class="fa fa-leaf" aria-hidden="true"></i><p class="title">Local Open Space</p>
-<p></p>
-<p class="info">ID: ${feature.properties.id}</p>
-<p class="info">Name: ${feature.properties.name}</p>
-<p class="info">Policy: ${feature.properties.policy}</p>
+const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-leaf smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Local Open Space</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
+  </div>`
   
-</div>`
- 
-layer.bindPopup(content)
+  layer.bindPopup(content)
 }
 
 const localwildlifesitesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-pagelines" aria-hidden="true"></i><p class="title">Local Wildlife Sites</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-    
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fab fa-pagelines smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Local Wildlife Sites</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
    
   layer.bindPopup(content)
@@ -207,11 +270,15 @@ const localwildlifesitesPopup = (feature, layer) => {
 
 const metrolinkcorridorPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-subway" aria-hidden="true"></i><p class="title">Metrolink Corridor</p>
-  <p></p>
-  <p class="info">Chapter: ${feature.properties.chapter}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-      
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-subway smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Metrolink Corridor</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Chapter: ${feature.properties.chapter}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
      
   layer.bindPopup(content)
@@ -219,12 +286,16 @@ const metrolinkcorridorPopup = (feature, layer) => {
 
 const m60gatewaysitesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-road" aria-hidden="true"></i><p class="title">M60 Gateway Sites</p>
-  <p></p>
-  <p class="info">Chapter: ${feature.properties.chapter}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-     
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-road smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">M60 Gateway Sites</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Chapter: ${feature.properties.chapter}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
      
   layer.bindPopup(content)
@@ -232,10 +303,14 @@ const m60gatewaysitesPopup = (feature, layer) => {
 
 const parkgardenofhistoricinterestPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-tree" aria-hidden="true"></i><p class="title">Park or Garden of Historic Interest</p>
-  <p></p>
-  <p class="info">Site: ${feature.properties.site}</p>
-     
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-tree smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Park or Garden of Historic Interest</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Site: ${feature.properties.site}</p>
+    </div>
   </div>`
        
   layer.bindPopup(content)
@@ -243,12 +318,16 @@ const parkgardenofhistoricinterestPopup = (feature, layer) => {
 
 const pgasPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-file-text" aria-hidden="true"></i><p class="title">Policy Guidance Areas</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-     
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-file-alt smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Policy Guidance Areas</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
        
   layer.bindPopup(content)
@@ -256,12 +335,16 @@ const pgasPopup = (feature, layer) => {
 
 const predominantlyresidentialPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Predominantly Residential Areas</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-       
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-home smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Predominantly Residential Areas</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
          
   layer.bindPopup(content)
@@ -269,12 +352,16 @@ const predominantlyresidentialPopup = (feature, layer) => {
 
 const reliefroadcorridorPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-road" aria-hidden="true"></i><p class="title">Relief Road Corridor</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-         
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-road smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Relief Road Corridor</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div> 
   </div>`
            
   layer.bindPopup(content)
@@ -282,12 +369,16 @@ const reliefroadcorridorPopup = (feature, layer) => {
 
 const sandaosPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-search" aria-hidden="true"></i><p class="title">Sand - Area of Search</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-           
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-search smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Sand - Area of Search</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>      
   </div>`
              
   layer.bindPopup(content)
@@ -295,12 +386,16 @@ const sandaosPopup = (feature, layer) => {
 
 const sandgritaosPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-search" aria-hidden="true"></i><p class="title">Sandstone/Gritstone - Area of Search</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-             
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-search smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Sandstone/Gritstone - Area of Search</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>   
   </div>`
                
   layer.bindPopup(content)
@@ -308,12 +403,16 @@ const sandgritaosPopup = (feature, layer) => {
 
 const shopfrontagesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-shopping-basket" aria-hidden="true"></i><p class="title">Shop Frontages</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.policyname}</p>
-  <p class="info">Policy: ${feature.properties.policysitename}</p>
-               
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-shopping-basket smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Shop Frontages</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.policyname}</p>
+      <p>Policy: ${feature.properties.policysitename}</p>
+    </div>           
   </div>`
                  
   layer.bindPopup(content)
@@ -321,11 +420,15 @@ const shopfrontagesPopup = (feature, layer) => {
 
 const shoppingtcPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-shopping-cart" aria-hidden="true"></i><p class="title">Shopping TC</p>
-  <p></p>
-  <p class="info">Area: ${feature.properties.shoppingareas}</p>
-  <p class="info">Policy: ${feature.properties.policy_1}</p>
-                 
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-shopping-cart smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Shopping TC</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Area: ${feature.properties.shoppingareas}</p>
+      <p>Policy: ${feature.properties.policy_1}</p>
+    </div>          
   </div>`
                    
   layer.bindPopup(content)
@@ -333,11 +436,15 @@ const shoppingtcPopup = (feature, layer) => {
 
 const shoppingareasPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-shopping-cart" aria-hidden="true"></i><p class="title">Shopping Areas</p>
-  <p></p>
-  <p class="info">Name: ${feature.properties.policysitename}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-                   
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-shopping-cart smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Shopping Areas</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Name: ${feature.properties.policysitename}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>               
   </div>`
                      
   layer.bindPopup(content)
@@ -345,11 +452,15 @@ const shoppingareasPopup = (feature, layer) => {
 
 const sbiPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-leaf" aria-hidden="true"></i><p class="title">Sites of Biological Importance</p>
-  <p></p>
-  <p class="info">Site Name: ${feature.properties.site_name}</p>
-  <p class="info">Reference Number: ${feature.properties.reference_number}</p>
-                     
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-leaf smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Sites of Biological Importance</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Site Name: ${feature.properties.site_name}</p>
+      <p>Reference Number: ${feature.properties.reference_number}</p>
+    </div>             
   </div>`
                        
   layer.bindPopup(content)
@@ -357,12 +468,16 @@ const sbiPopup = (feature, layer) => {
 
 const sssiPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-flask" aria-hidden="true"></i><p class="title">Sites of Special Scientific Interest</p>
-  <p></p>
-  <p class="info">Site Name: ${feature.properties.sssi_name}</p>
-  <p class="info">Site Name: ${feature.properties.sssi_area}</p>
-  <p class="info">Designation Status: ${feature.properties.designation_status}</p>
-                       
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-flask smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Sites of Special Scientific Interest</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Site Name: ${feature.properties.sssi_name}</p>
+      <p>Site Name: ${feature.properties.sssi_area}</p>
+      <p>Designation Status: ${feature.properties.designation_status}</p>
+    </div>            
   </div>`
                          
   layer.bindPopup(content)
@@ -370,10 +485,14 @@ const sssiPopup = (feature, layer) => {
 
 const strategicopenspacePopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-tree" aria-hidden="true"></i><p class="title">Strategic Open Space</p>
-  <p></p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-                         
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-tree smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Strategic Open Space</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>               
   </div>`
                            
   layer.bindPopup(content)
@@ -381,11 +500,15 @@ const strategicopenspacePopup = (feature, layer) => {
 
 const strategicrecreationroutesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-bicycle" aria-hidden="true"></i><p class="title">Strategic Recreation Routes</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-                           
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-bicycle smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Strategic Recreation Routes</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>                    
   </div>`
                              
   layer.bindPopup(content)
@@ -393,12 +516,16 @@ const strategicrecreationroutesPopup = (feature, layer) => {
 
 const towncentreareasPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-building" aria-hidden="true"></i><p class="title">Town Centre Areas</p>
-  <p></p>
-  <p class="info">ID: ${feature.properties.id}</p>
-  <p class="info">Name: ${feature.properties.name}</p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-                             
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-building smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Town Centre Areas</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>ID: ${feature.properties.id}</p>
+      <p>Name: ${feature.properties.name}</p>
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>                      
   </div>`
                                
   layer.bindPopup(content)
