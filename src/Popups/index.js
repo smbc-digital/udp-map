@@ -1,9 +1,13 @@
 const airport_public_safety_zonePopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-plane" aria-hidden="true"></i><p class="title">Airport Public Safety Zone</p>
-  <p></p>
-  <p class="info">Policy: ${feature.properties.policy}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-plane smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Airport Public Safety Zone</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Policy: ${feature.properties.policy}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
